@@ -7,7 +7,7 @@
 WITH mediaType_distribution AS (
 	SELECT mediaType, COUNT(*) AS movieCount
 	FROM imdb_data
-    WHERE mediaType IS NOT NULL 
+    	WHERE mediaType IS NOT NULL 
 	GROUP BY mediaType
 )
 SELECT *
@@ -22,7 +22,7 @@ WITH mediaType_distribution AS (
 		COUNT(CASE WHEN averageRating >= 6.5 AND averageRating < 8 THEN 1 END) AS goodRatingCount,
 		COUNT(CASE WHEN averageRating < 6.5 THEN 1 END) AS lowRatingCount
 	FROM imdb_data
-    WHERE 
+    	WHERE 
 		mediaType IS NOT NULL 
 		AND (averageRating IS NOT NULL OR averageRating != '')
 	GROUP BY mediaType
@@ -41,8 +41,7 @@ WITH movieCountByYear AS (
 		releaseYear, 
 		COUNT(*) AS movieCount 
 	FROM imdb_data
-	WHERE 
-		LOWER(mediaType) = 'movie'
+	WHERE LOWER(mediaType) = 'movie'
 	GROUP BY releaseYear
 	ORDER BY releaseYear DESC
 )
@@ -60,7 +59,7 @@ WITH movieCountByYear AS (
 	WHERE 
 		LOWER(mediaType) = 'movie'
 		AND (averageRating IS NOT NULL OR averageRating != '')
-        AND releaseYear IS NOT NULL
+        	AND releaseYear IS NOT NULL
 	GROUP BY releaseYear
 	ORDER BY releaseYear DESC
 )
@@ -78,20 +77,20 @@ WITH movieCountByYear AS (
 	WHERE 
 		LOWER(mediaType) = 'movie'
 		AND (averageRating IS NOT NULL OR averageRating != '')
-        AND releaseYear IS NOT NULL
+        	AND releaseYear IS NOT NULL
 	GROUP BY releaseYear
 	ORDER BY releaseYear DESC
 )
 SELECT * FROM movieCountByYear
 WHERE lowRatingCount = (
 	SELECT MAX(lowRatingCount)
-    FROM movieCountByYear
+    	FROM movieCountByYear
 )
 UNION ALL
 SELECT * FROM movieCountByYear
 WHERE excellentRatingCount = (
 	SELECT MAX(excellentRatingCount)
-    FROM movieCountByYear
+    	FROM movieCountByYear
 );
 
 WITH movieCountByYear AS (
@@ -106,7 +105,7 @@ WITH movieCountByYear AS (
 SELECT * FROM movieCountByYear
 WHERE movieCount = (
 	SELECT MAX(movieCount) FROM movieCountByYear
-    WHERE releaseYear IS NOT NULL AND releaseYear != ''
+    	WHERE releaseYear IS NOT NULL AND releaseYear != ''
 );
 
 -- What's the distribution of titles by genre count?
@@ -121,7 +120,7 @@ WITH movieCountByGenre AS (
 		genres IS NOT NULL 
 		AND genres != ''
 		AND releaseYear IS NOT NULL
-        AND LOWER(mediaType) = 'movie'
+        	AND LOWER(mediaType) = 'movie'
 	ORDER BY genreCount DESC
 )
 SELECT genreCount, COUNT(*) AS movieCount FROM movieCountByGenre
@@ -134,9 +133,9 @@ CREATE TEMPORARY TABLE genre_split_temp AS
 	SELECT 
 		releaseYear,
 		title,
-        mediaType,
-        averageRating,
-        numVotes,
+        	mediaType,
+        	averageRating,
+        	numVotes,
 		TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(genres, ',', 1), ',', -1)) AS genre
 	FROM imdb_data
 	WHERE genres IS NOT NULL
@@ -146,9 +145,9 @@ CREATE TEMPORARY TABLE genre_split_temp AS
 	SELECT 
 		releaseYear,
 		title,
-        mediaType,
-        averageRating,
-        numVotes,
+        	mediaType,
+        	averageRating,
+        	numVotes,
 		TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(genres, ',', 2), ',', -1)) AS genre
 	FROM imdb_data
 	WHERE genres LIKE '%,%'
@@ -158,9 +157,9 @@ CREATE TEMPORARY TABLE genre_split_temp AS
 	SELECT 
 		releaseYear,
 		title,
-        mediaType,
-        averageRating,
-        numVotes,
+        	mediaType,
+        	averageRating,
+        	numVotes,
 		TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(genres, ',', 3), ',', -1)) AS genre
 	FROM imdb_data
 	WHERE genres LIKE '%,%,%';
@@ -216,17 +215,17 @@ WITH movieGenre_distribution AS (
 	FROM genre_split_temp
 	WHERE 
 		genre != ''
-        AND (averageRating IS NOT NULL OR averageRating != '')
+        	AND (averageRating IS NOT NULL OR averageRating != '')
 	GROUP BY genre
 	ORDER BY movieCount DESC
 	LIMIT 10
 )
 SELECT 
 	genre,
-    movieCount,
-    ROUND(excellentRatingCount/movieCount * 100, 1) AS excellentRatingPercent,
-    ROUND(goodRatingCount/movieCount * 100, 1) AS goodRatingPercent,
-    ROUND(lowRatingCount/movieCount * 100, 1) AS lowRatingPercent
+    	movieCount,
+    	ROUND(excellentRatingCount/movieCount * 100, 1) AS excellentRatingPercent,
+    	ROUND(goodRatingCount/movieCount * 100, 1) AS goodRatingPercent,
+    	ROUND(lowRatingCount/movieCount * 100, 1) AS lowRatingPercent
 FROM movieGenre_distribution
 ORDER BY excellentRatingPercent DESC;
 
@@ -239,27 +238,27 @@ CALL GetBottom10MoviesByGenre('Animation');
 -- What are the top 10 highest rated animation tvSeries?
 SELECT 
 	releaseYear,
-    title, 
-    mediaType, 
-    averageRating
+    	title, 
+    	mediaType, 
+    	averageRating
 FROM genre_split_temp
 WHERE 
 	LOWER(genre) = 'animation'
-    AND numVotes >= 10000
-    AND (mediaType = 'tvSeries' OR mediaType = 'tvMiniSeries')
+    	AND numVotes >= 10000
+    	AND (mediaType = 'tvSeries' OR mediaType = 'tvMiniSeries')
 ORDER BY averageRating DESC
 LIMIT 10;
 
 -- What are the 10 lowest rated animation tvSeries?
 SELECT 
 	releaseYear,
-    title, 
-    mediaType, 
-    averageRating
+    	title, 
+    	mediaType, 
+    	averageRating
 FROM genre_split_temp
 WHERE 
 	LOWER(genre) = 'animation'
-    AND numVotes >= 10000
-    AND (mediaType = 'tvSeries' OR mediaType = 'tvMiniSeries')
+    	AND numVotes >= 10000
+    	AND (mediaType = 'tvSeries' OR mediaType = 'tvMiniSeries')
 ORDER BY averageRating ASC
 LIMIT 10;
