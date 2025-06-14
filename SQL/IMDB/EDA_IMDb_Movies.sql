@@ -164,46 +164,6 @@ CREATE TEMPORARY TABLE genre_split_temp AS
 	FROM imdb_data
 	WHERE genres LIKE '%,%,%';
 
-DROP PROCEDURE IF EXISTS GetTop10MoviesByGenre;
-DELIMITER //
-CREATE PROCEDURE GetTop10MoviesByGenre(IN genre_input VARCHAR(50))
-BEGIN
-    SELECT 
-        title,
-        releaseYear,
-        averageRating,
-        numVotes,
-        genre
-    FROM genre_split_temp
-    WHERE 
-        LOWER(genre) = LOWER(genre_input)
-        AND mediaType = 'movie'
-        AND numVotes >= 10000
-    ORDER BY averageRating DESC
-    LIMIT 10;
-END //
-DELIMITER ;
-
-DROP PROCEDURE IF EXISTS GetBottom10MoviesByGenre;
-DELIMITER //
-CREATE PROCEDURE GetBottom10MoviesByGenre(IN genre_input VARCHAR(50))
-BEGIN
-    SELECT 
-        title,
-        releaseYear,
-        averageRating,
-        numVotes,
-        genre
-    FROM genre_split_temp
-    WHERE 
-        LOWER(genre) = LOWER(genre_input)
-        AND mediaType = 'movie'
-        AND numVotes >= 10000
-    ORDER BY averageRating ASC
-    LIMIT 10;
-END //
-DELIMITER ;
-
 -- What does the rating distribution look like across movie genres?
 WITH movieGenre_distribution AS (
 	SELECT 
@@ -236,29 +196,7 @@ CALL GetTop10MoviesByGenre('Animation');
 CALL GetBottom10MoviesByGenre('Animation');
 
 -- What are the top 10 highest rated animation tvSeries?
-SELECT 
-	releaseYear,
-    	title, 
-    	mediaType, 
-    	averageRating
-FROM genre_split_temp
-WHERE 
-	LOWER(genre) = 'animation'
-    	AND numVotes >= 10000
-    	AND (mediaType = 'tvSeries' OR mediaType = 'tvMiniSeries')
-ORDER BY averageRating DESC
-LIMIT 10;
+CALL GetTop10TVSeriesByGenre ('Animation');
 
 -- What are the 10 lowest rated animation tvSeries?
-SELECT 
-	releaseYear,
-    	title, 
-    	mediaType, 
-    	averageRating
-FROM genre_split_temp
-WHERE 
-	LOWER(genre) = 'animation'
-    	AND numVotes >= 10000
-    	AND (mediaType = 'tvSeries' OR mediaType = 'tvMiniSeries')
-ORDER BY averageRating ASC
-LIMIT 10;
+CALL GetBottom10TVSeriesByGenre('Animation');
