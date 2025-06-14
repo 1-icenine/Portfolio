@@ -1,3 +1,8 @@
+-- Filename: procedures.sql
+-- Purpose: Contains reusable stored procedures for analyzing IMDb data based on user input
+-- Author: Nicholas Louie
+-- Last Updated: 2025-06-13
+
 DROP PROCEDURE IF EXISTS GetTop10MoviesByGenre;
 DELIMITER //
 CREATE PROCEDURE GetTop10MoviesByGenre(IN genre_input VARCHAR(50))
