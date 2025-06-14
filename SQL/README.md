@@ -3,4 +3,5 @@
 ### Contents:
   - Murder Mystery
   - Box Office EDA
+  - Movie EDA
   - Spotify EDA
