@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project uses SQL to explore and analyze a dataset of 600 Spotify tracks. It focuses on genre diversity, song popularity, length trends, and album name characteristics. It also includes reusable stored procedures for fetching popular tracks and longest songs.
+This project uses SQL to explore and analyze a dataset of 600 Spotify tracks. It focuses on genre diversity, song popularity, length trends, and album name characteristics. It also includes reusable stored procedures for fetching popular tracks and the longest songs.
 
 ## 🧠 Lessons Learned
 - Used `DENSE_RANK()` to identify top songs by genre and filter results cleanly with `WHERE` and `LIMIT` logic.
@@ -37,7 +37,7 @@ CALL GetBottom10MoviesByGenre('GetLongestSongs');
 
 ## 📂 Dataset
 
-The dataset was sourced from Kaggle. As of 06/14/2025, the dataset was last updated a year ago. 
+The dataset was sourced from Kaggle (https://www.kaggle.com/datasets/ambaliyagati/spotify-dataset-for-playing-around-with-sql/data). As of 06/14/2025, the dataset was last updated a year ago. 
 
 It includes information on:
 - Track name
