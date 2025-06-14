@@ -17,7 +17,7 @@ CREATE TABLE spotify_data (
 
 SHOW VARIABLES LIKE 'secure_file_priv';
 
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/spotify_dataset.csv'
+LOAD DATA INFILE '/your/path/to/spotify_dataset.csv'
 INTO TABLE spotify_data
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
@@ -26,10 +26,10 @@ IGNORE 1 ROWS
 (@id, @name, @genre, @artists, @album, @popularity, @duration_ms, @explicit)
 SET
 	id = @id, 
-    name = @name, 
-    genre = @genre, 
-    artists = @artists, 
-    album = @album, 
-    popularity = @popularity, 
-    duration_ms = @duration_ms, 
-    explicit = TRIM(LOWER(@explicit))
+   	name = @name, 
+    	genre = @genre, 
+    	artists = @artists, 
+    	album = @album, 
+   	popularity = @popularity, 
+    	duration_ms = @duration_ms, 
+    	explicit = TRIM(LOWER(@explicit))
