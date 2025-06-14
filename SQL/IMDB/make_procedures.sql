@@ -1,4 +1,4 @@
--- Filename: procedures.sql
+-- Filename: make_procedures.sql
 -- Purpose: Contains reusable stored procedures for analyzing IMDb data based on user input
 -- Author: Nicholas Louie
 -- Last Updated: 2025-06-13
