@@ -64,7 +64,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 ```
 
-2. Run EDA_IMDb_Movies.sql in chunks using a MySQL client like MySQL Workbench.
+2. Run EDA_IMDb_Movies.sql in chunks using a SQL client like MySQL Workbench.
 
 3. Run the scripts in make_procedures.sql to create procedures needed to run CALL procedures like those below:
 
