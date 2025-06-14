@@ -39,17 +39,16 @@ It includes information on:
 - What are the most common genres?
 - Which genres have the highest rated films? How about lowest rated films?
 
-### 🏆 Top & Bottom 10 Rankings
+### 🏆 Animation Deep Dive
 - 10 Highest/lowest-rated movies in a given genre
 - 10 Highest/lowest-rated animation TV series and movies
 
-## ⚙️ SQL Features Demonstrated
-- ✅ UNION ALL and filtering (WHERE statements) to split multi-genre rows
-- ✅ CTEs (WITH statements) to structure multi-step queries
-- ✅ Conditional aggregation with CASE WHEN for rating categories
-- ✅ Temporary tables for genre-splitting from comma-separated strings
-- ✅ Stored procedures with parameters to retrieve top/bottom entries by genre input
-- ✅ Rounding and formatting for clean presentation
+## 🧠 Lessons Learned
+- Wrote CTEs to break down complex logic and do pre-processing when window functions weren't possible.
+- Learned how to reshape and filter multi-labeled genre data for better insights.
+- Used temporary tables to organize large datasets efficiently.
+- Created stored procedures for reusable, genre-specific analysis.
+- Applied CASE WHEN logic for clear breakdowns of rating categories.
 
 ## 📌 Setup & Usage
 
@@ -65,7 +64,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 ```
 
-2. Run EDA_IMDb_Movies.sql in chunks using a MySQL client.
+2. Run EDA_IMDb_Movies.sql in chunks using a MySQL client like MySQL Workbench.
 
 3. Run the scripts in make_procedures.sql to create procedures needed to run CALL procedures like those below:
 
@@ -74,4 +73,5 @@ CALL GetTop10MoviesByGenre('Animation');
 CALL GetBottom10MoviesByGenre('Animation');
 ```
 
-
+## 📊 Sample Output
+![image](https://github.com/user-attachments/assets/306be92e-899f-4bb7-aaf5-38934a44d906)
