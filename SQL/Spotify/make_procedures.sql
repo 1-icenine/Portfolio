@@ -9,12 +9,11 @@ DELIMITER $$
 CREATE PROCEDURE GetPopularTracksByGenre(p_genre VARCHAR(100), min_popularity INT)
 BEGIN
 	SELECT name, album, artists, popularity
-    FROM spotify_data
-    WHERE 
+    	FROM spotify_data
+    	WHERE 
 		genre = p_genre 
 		AND popularity >= min_popularity
-    ORDER BY popularity DESC
-    ;
+    	ORDER BY popularity DESC;
 END $$
 DELIMITER ;
 
@@ -27,7 +26,7 @@ BEGIN
 	(
 		SELECT 
 			name, 
-            genre,
+            		genre,
 			artists, 
 			album,
 			duration_ms / (1000 * 60) AS duration_min,
