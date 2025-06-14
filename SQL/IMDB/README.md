@@ -67,9 +67,11 @@ IGNORE 1 ROWS;
 
 2. Run EDA_IMDb_Movies.sql in chunks using a MySQL client.
 
-3. (Optional) Call procedures like:
+3. Run the scripts in make_procedures.sql to create procedures needed to run CALL procedures like those below:
 
 ```
 CALL GetTop10MoviesByGenre('Animation');
 CALL GetBottom10MoviesByGenre('Animation');
 ```
+
+
