@@ -20,7 +20,7 @@ ORDER BY explicit, duration_ms DESC;
 WITH categorized_song_metrics AS (
 	SELECT 	
 		name, 
-        genre,
+        	genre,
 		ROUND(duration_ms/(1000*60), 2) AS duration_min,
 		CASE 
 			WHEN ROUND(duration_ms/(1000*60), 2) < 3 THEN 'Short'
@@ -37,9 +37,9 @@ WITH categorized_song_metrics AS (
 )
 SELECT
 	DISTINCT genre,
-    COUNT(CASE WHEN popularity_tier = 'High' THEN 1 END) OVER(PARTITION BY genre) AS no_high_pop_songs,
-    COUNT(CASE WHEN popularity_tier = 'Mediocre' THEN 1 END) OVER(PARTITION BY genre) AS no_mediocre_pop_songs,
-    COUNT(CASE WHEN popularity_tier = 'Low' THEN 1 END) OVER(PARTITION BY genre) AS no_low_pop_songs
+    	COUNT(CASE WHEN popularity_tier = 'High' THEN 1 END) OVER(PARTITION BY genre) AS no_high_pop_songs,
+    	COUNT(CASE WHEN popularity_tier = 'Mediocre' THEN 1 END) OVER(PARTITION BY genre) AS no_mediocre_pop_songs,
+    	COUNT(CASE WHEN popularity_tier = 'Low' THEN 1 END) OVER(PARTITION BY genre) AS no_low_pop_songs
 FROM categorized_song_metrics
 ORDER BY no_high_pop_songs DESC;
 
@@ -47,7 +47,7 @@ ORDER BY no_high_pop_songs DESC;
 WITH categorized_song_metrics AS (
 	SELECT 	
 		name, 
-        genre,
+        	genre,
 		ROUND(duration_ms/(1000*60), 2) AS duration_min,
 		CASE 
 			WHEN ROUND(duration_ms/(1000*60), 2) < 3 THEN 'Short'
@@ -58,9 +58,9 @@ WITH categorized_song_metrics AS (
 )
 SELECT
 	DISTINCT genre,
-    COUNT(CASE WHEN length_category = 'Long' THEN 1 END) OVER(PARTITION BY genre) AS no_long_length_songs,
-    COUNT(CASE WHEN length_category = 'Average' THEN 1 END) OVER(PARTITION BY genre) AS no_average_length_songs,
-    COUNT(CASE WHEN length_category = 'Short' THEN 1 END) OVER(PARTITION BY genre) AS no_short_length_songs
+    	COUNT(CASE WHEN length_category = 'Long' THEN 1 END) OVER(PARTITION BY genre) AS no_long_length_songs,
+    	COUNT(CASE WHEN length_category = 'Average' THEN 1 END) OVER(PARTITION BY genre) AS no_average_length_songs,
+    	COUNT(CASE WHEN length_category = 'Short' THEN 1 END) OVER(PARTITION BY genre) AS no_short_length_songs
 FROM categorized_song_metrics
 ORDER BY no_long_length_songs DESC;
 
@@ -90,9 +90,9 @@ WITH song_popularity_vs_genre_avg AS (
 )
 SELECT 
 	DISTINCT genre,
-    avg_genre_popularity,
-    COUNT(CASE WHEN popularity >= avg_genre_popularity THEN 1 END) OVER(PARTITION BY genre) AS no_songs_above_avg,
-    COUNT(CASE WHEN popularity < avg_genre_popularity THEN 1 END) OVER(PARTITION BY genre) AS no_songs_below_avg
+    	avg_genre_popularity,
+    	COUNT(CASE WHEN popularity >= avg_genre_popularity THEN 1 END) OVER(PARTITION BY genre) AS no_songs_above_avg,
+    	COUNT(CASE WHEN popularity < avg_genre_popularity THEN 1 END) OVER(PARTITION BY genre) AS no_songs_below_avg
 FROM song_popularity_vs_genre_avg
 ORDER BY avg_genre_popularity DESC;
 
@@ -101,15 +101,15 @@ WITH album_title_lengths AS
 (
 	SELECT 
 		DISTINCT album,
-        genre,
-        LENGTH(album) AS album_len,
-        MAX(LENGTH(album)) OVER (PARTITION BY genre) AS max_album_len
+        	genre,
+        	LENGTH(album) AS album_len,
+        	MAX(LENGTH(album)) OVER (PARTITION BY genre) AS max_album_len
 	FROM spotify_data
 )
 SELECT 
 	album,
-    genre,
-    album_len
+    	genre,
+    	album_len
 FROM album_title_lengths
 WHERE album_len = max_album_len
 ORDER BY max_album_len DESC;
