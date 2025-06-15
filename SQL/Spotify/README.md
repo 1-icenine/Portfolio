@@ -28,7 +28,7 @@ IGNORE 1 ROWS;
 
 2. Run spotify_queries.sql in chunks and explore insights.
 
-3. *(Optional)* Run the scripts in `make_procedures.sql` to create procedures needed to run CALL procedures in `spotify_queries.sql`
+3. *(Optional)* Run the scripts in `make_procedures.sql` to create procedures needed to run `CALL` procedures in `spotify_queries.sql`
 
 ```SQL
 CALL GetPopularTracksByGenre('alt-rock', 50);
