@@ -1,4 +1,4 @@
-# 🎬 Spotify Data Exploration with SQL
+# 🎵 Spotify Data Exploration with SQL
 
 ## 📌 Overview
 
@@ -19,7 +19,7 @@ To replicate this project:
 2. Run the scripts in load_spotify_data.sql and edit the path to the dataset file:
 
 ```SQL
-LOAD DATA INFILE 'your/path/to/imdb_dataset.csv'
+LOAD DATA INFILE 'your/path/to/spotify_dataset.csv'
 INTO TABLE spotify_data
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -31,8 +31,8 @@ IGNORE 1 ROWS;
 3. Run the scripts in make_procedures.sql to create procedures needed to run CALL procedures like those below:
 
 ```SQL
-CALL GetTop10MoviesByGenre('GetPopularTracksByGenre');
-CALL GetBottom10MoviesByGenre('GetLongestSongs');
+CALL GetPopularTracksByGenre('alt-rock', 50);
+CALL GetLongestSongs(10);
 ```
 
 ## 📂 Dataset
