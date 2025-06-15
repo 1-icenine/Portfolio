@@ -37,7 +37,7 @@ CALL GetLongestSongs(10);
 
 ## 📂 Dataset
 
-The dataset was sourced from Kaggle: [Spotify Dataset for Playing Around with SQL](https://www.kaggle.com/datasets/ambaliyagati/spotify-dataset-for-playing-around-with-sql/data)
+The dataset was sourced from Kaggle: [Spotify Songs Dataset](https://www.kaggle.com/datasets/ambaliyagati/spotify-dataset-for-playing-around-with-sql/data)
 
 It has information on individual Spotify tracks, including:
 - Track name, artist(s), album, and genre
