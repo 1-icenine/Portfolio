@@ -27,7 +27,7 @@ IGNORE 1 ROWS;
 
 2. Run EDA_IMDb_Movies.sql in chunks and explore insights.
 
-3. *(OPTIONAL)* Run the scripts in `make_procedures.sql` to create procedures needed to run CALL procedures like those below:
+3. *(OPTIONAL)* Run the scripts in `make_procedures.sql` to create procedures needed to run `CALL` procedures like those below:
 
 ```
 CALL GetTop10MoviesByGenre('Animation');
@@ -36,18 +36,15 @@ CALL GetBottom10MoviesByGenre('Animation');
 
 ## 📂 Dataset
 
-The dataset was sourced from Kaggle (https://www.kaggle.com/datasets/octopusteam/full-imdb-dataset). According to the source, it is updated daily at 8:00 AM UTC, so this analysis is up-to-date as of 06/14/2025.
+The dataset was sourced from Kaggle: [Full IMDb Dataset (1M+)](https://www.kaggle.com/datasets/octopusteam/full-imdb-dataset). It updates daily at 8:00 AM UTC, and this analysis uses data current as of 06/14/2025.
 
 It includes information on:
 - Title names
-- Media types (e.g., movie, tvSeries, tvMiniSeries)
+- Media types (e.g., *movie, tvSeries, tvMiniSeries*)
 - Release years
 - Genres (multi-labeled)
-- Ratings out of 10
-- Vote counts
-
-> [!IMPORTANT]
-> The CSV file was imported using LOAD DATA INFILE. The path is system-dependent and should be adjusted as needed before execution.
+- IMDb ratings out of 10
+- Total vote counts
 
 ## 🔍 Key Questions Explored
 
