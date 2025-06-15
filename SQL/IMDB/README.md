@@ -15,7 +15,9 @@ This project explores and analyzes a large 1M+ IMDb dataset using advanced SQL q
 
 To replicate this project:
 
-1. Import the dataset in your SQL environment via `load_imdb_data.sql`. Be sure to update the file path below.
+1. Downnload the dataset from Kaggle.
+
+2. Import the dataset in your SQL environment via `load_imdb_data.sql`. Be sure to update the file path below.
 
 ```SQL
 LOAD DATA INFILE 'your/path/to/imdb_dataset.csv'
