@@ -1,5 +1,5 @@
 -- Filename: spotify_queries.sql
--- Purpose: Load and process Spotify dataset CSV into spotify_data table
+-- Purpose: Analyze the Spotify data for trends related to popularity, time, and name length
 -- Author: Nicholas Louie
 -- Last Updated: 2025-06-14
 
