@@ -38,28 +38,28 @@ WITH album_recommendation AS (
 	JOIN album a ON t.AlbumId = a.AlbumId
 	GROUP BY 
 		g.Name, 
-        t.Composer, 
-        a.Title
+        	t.Composer, 
+        	a.Title
 	ORDER BY tracks_sold DESC, genre DESC
 ),
 ranked_albums AS (
 	SELECT *,
-    DENSE_RANK() OVER (
+	DENSE_RANK() OVER (
 		PARTITION BY genre
-        ORDER BY tracks_sold DESC
+	        ORDER BY tracks_sold DESC
 	) AS rank_within_genre
 	FROM album_recommendation
 )
 SELECT * FROM ranked_albums
 WHERE 
 	rank_within_genre <= 3
-    AND (genre = 'Rock' OR genre = 'Latin' OR genre = 'Metal')
+    	AND (genre = 'Rock' OR genre = 'Latin' OR genre = 'Metal')
 ORDER BY genre, rank_within_genre;
 
 -- Objective 3: Evaluate support representatives' sales performance
 SELECT 
 	e.EmployeeId,
-    CONCAT(e.FirstName, ' ', e.LastName) AS employee_name,
+    	CONCAT(e.FirstName, ' ', e.LastName) AS employee_name,
 	e.Title,
 	e.Country,
 	SUM(il.UnitPrice * il.Quantity) AS profit_in_USD,
@@ -71,9 +71,9 @@ JOIN customer c ON i.CustomerId = c.CustomerId
 JOIN employee e ON c.SupportRepId = e.EmployeeId
 GROUP BY 
 	e.EmployeeId, 
-    e.Title, 
-    e.Country, 
-    e.ReportsTo
+    	e.Title, 
+    	e.Country, 
+    	e.ReportsTo
 ORDER BY profit_in_USD DESC;
 
 -- Sanity checks: Validate invoice and employee/customer relations
@@ -82,7 +82,7 @@ FROM invoice;
 
 SELECT 
 	DISTINCT EmployeeId, 
-    CONCAT(FirstName, ' ', LastName) AS employee_name
+    	CONCAT(FirstName, ' ', LastName) AS employee_name
 FROM employee;
 
 SELECT DISTINCT SupportRepId
@@ -104,8 +104,8 @@ SELECT * FROM country_sales;
 
 SELECT
 	SUM(Total_Purchases) AS Total_Sales_USD,
-    SUM(Total_Customers) AS Total_Customers,
-    SUM(Total_Orders) AS Total_Orders
+    	SUM(Total_Customers) AS Total_Customers,
+    	SUM(Total_Orders) AS Total_Orders
 FROM country_sales;
 
 -- Sanity checks: Confirm consistency between country_sales view and base data
