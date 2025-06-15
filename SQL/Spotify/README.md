@@ -10,11 +10,11 @@ This project uses SQL to explore and analyze a dataset of 600 Spotify tracks. It
 - Applied `OVER(PARTITION BY ...)` to calculate genre-specific and artist-specific metrics such as average popularity and song counts.
 - Gained experience categorizing numerical data into meaningful labels to support clearer insights.
 
-## 📌 Setup & Usage
+## 🛠️ Setup & Usage
 
 To replicate this project:
 
-1. Import the dataset
+1. Import the dataset in your SQL environmennt
 
 2. Run the scripts in load_spotify_data.sql and edit the path to the dataset file:
 
@@ -26,9 +26,9 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 ```
 
-2. Run spotify_queries.sql in chunks using a SQL client like MySQL Workbench.
+2. Run spotify_queries.sql in chunks and explore insights.
 
-3. Run the scripts in make_procedures.sql to create procedures needed to run CALL procedures like those below:
+3. *(Optional)* Run the scripts in `make_procedures.sql` to create procedures needed to run CALL procedures in `spotify_queries.sql`
 
 ```SQL
 CALL GetPopularTracksByGenre('alt-rock', 50);
