@@ -4,6 +4,9 @@
 
 In this SQL project, I investigated a fictional murder in SQL City by analyzing a relational database of crime scene reports, citizen info, gym check-ins, vehicle registrations, and more. Using SQL, I tracked down two key witnesses, identified the prime suspect, and ultimately revealed the criminal mastermind behind the murder.
 
+![68747470733a2f2f6769746875622e636f6d2f66726565737461636b696e69746961746976652f636f6f705f73716c5f6e6f7465626f6f6b732f626c6f622f76322f6173736574732f6d75726465725f6d7973746572795f736368656d612e706e673f7261773d31](https://github.com/user-attachments/assets/7b983541-3944-461f-85db-98492424e3b0)
+
+
 ## 💡 Key Takeaways
 - SQL is a more than just querying rows. It's about connecting clues across messy, real-world datasets.
 - Writing readable queries with CTEs helped me simplify complex logic.
