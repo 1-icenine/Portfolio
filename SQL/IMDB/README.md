@@ -11,11 +11,11 @@ This project explores and analyzes a large 1M+ IMDb dataset using advanced SQL q
 - Created stored procedures for reusable, genre-specific analysis.
 - Applied `CASE WHEN` logic for clear breakdowns of rating categories.
 
-## 📌 Setup & Usage
+## 🛠️ Setup & Usage
 
 To replicate this project:
 
-1. Import the dataset (edit this for your own machine):
+1. Import the dataset in your SQL environment via `load_imdb_data.sql`. Be sure to update the file path below.
 
 ```SQL
 LOAD DATA INFILE 'your/path/to/imdb_dataset.csv'
@@ -25,9 +25,9 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 ```
 
-2. Run EDA_IMDb_Movies.sql in chunks using a SQL client like MySQL Workbench.
+2. Run EDA_IMDb_Movies.sql in chunks and explore insights.
 
-3. Run the scripts in make_procedures.sql to create procedures needed to run CALL procedures like those below:
+3. *(OPTIONAL)* Run the scripts in `make_procedures.sql` to create procedures needed to run CALL procedures like those below:
 
 ```
 CALL GetTop10MoviesByGenre('Animation');
