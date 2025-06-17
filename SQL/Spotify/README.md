@@ -2,13 +2,12 @@
 
 ## 📌 Overview
 
-This project uses SQL to explore and analyze a dataset of 600 Spotify tracks. It focuses on genre diversity, song popularity, length trends, and album name characteristics. It also includes reusable stored procedures for fetching popular tracks and the longest songs.
+This project uses SQL to explore and analyze a dataset of 600 Spotify tracks. It focuses on analyzing popularity distributions and factors that could affect popularity. It also includes reusable stored procedures for fetching popular tracks and the longest songs.
 
 ## 🧠 Lessons Learned
-- Used `DENSE_RANK()` to identify top songs by genre and filter results cleanly with `WHERE` and `LIMIT` logic.
-- Leveraged `COUNT(CASE WHEN ...)` to quantify qualitative categories like popularity tiers and duration groups.
-- Applied `OVER(PARTITION BY ...)` to calculate genre-specific and artist-specific metrics such as average popularity and song counts.
-- Gained experience categorizing numerical data into meaningful labels to support clearer insights.
+- Used `DENSE_RANK()` for ranking songs and albums within genres.
+- Conditional counting with  `COUNT(CASE WHEN ...)` for category breakdowns.
+- Window functions `OVER(PARTITION BY ...)` to calculate genre-specific and artist-specific metrics such as average popularity and song counts.
 
 ## 🛠️ Setup & Usage
 
@@ -49,27 +48,16 @@ It has information on individual Spotify tracks, including:
 > This dataset includes all Spotify track titles without alteration. Any informal, provocative, or edgy titles reflect original artist naming.
 
 ## 🔍 Key Questions Explored
-
-### 🎼 Genres and Track Attributes
-- What are the distinct genres in the dataset?
-- How many unique genres are represented?
-
-### 🚫 Explicit and Long Tracks
-- Which tracks are explicit or longer than 5 minutes?
-
-### 📈 Popularity Analysis
-- Which genre has the most highly popular songs (popularity ≥ 70)?
-- How does the popularity of each song compare to the average popularity in its genre?
-- What are the top 3 most popular tracks within each genre?
-
-### ⏱️ Duration Analysis
-- Which genre has the most long songs (over 4 minutes)?
-- How are tracks categorized based on duration (Short, Average, Long)?
-
-### 🎵 Album Naming
-- Which albums have the longest names in each genre?
+- Which genres rank highest in popularity? What albums should be recommended based on that?
+- How does song length (Short <3 min, Average 3-4 min, Long >4 min) affect average popularity?
+- What is the distribution of song durations by genre?
+- What percent of songs in each genre are high, mediocre, or low popularity?
+- How many songs fall above or below their genre’s average popularity?
+- Does the length of a song’s title correlate with its popularity?
+-  Which artists do the best on average compared to their genre average?
 
 ## 📊 Sample Output
-![image](https://github.com/user-attachments/assets/35295098-fd2c-4028-8c7f-1848613e783d)
+![image](https://github.com/user-attachments/assets/172e0e33-b020-4475-836b-ff4ba9aeb87a)
+
 
 
