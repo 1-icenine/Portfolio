@@ -1,7 +1,7 @@
 -- Filename: spotify_queries.sql
 -- Purpose: Load and process Spotify dataset CSV into spotify_data table
 -- Author: Nicholas Louie
--- Last Updated: 2025-06-14
+-- Last Updated: 2025-06-17
 
 -- Objective 1: Identify the most popular music genres in the Spotify dataset
 SELECT 
