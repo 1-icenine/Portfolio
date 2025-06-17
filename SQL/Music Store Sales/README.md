@@ -25,7 +25,7 @@ This project uses SQL to analyze data from the [Chinook sample database](https:/
 4. Which countries generate the most revenue?
 5. What are the average order values and spending per customer by country?
 
-## 💡Business Questions Answered 
+## 💡 Business Questions Answered 
 - The store should invest in Rock, Latin, and Metal because they were the most popular American genres
 - The store could consider marketing high-selling albums in those genres like:
   - **Rock:** Chronicle, Vol. 2
