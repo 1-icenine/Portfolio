@@ -10,13 +10,12 @@ This project is a mock portfolio case study I did during my COOP fellowship with
 
 **Tools Used:**
 - Excel – data cleaning and preprocessing
-  - [📈 Campaign and user demographic datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
+  - [📈 Campaign and User Demographic Datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
   - [🧹 My Cleaning Process](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset/Nick's%20Data%20Cleanup%20Process.pdf)
 - Tableau – trend analysis via dual charts
   - [📶 Tableau Public Link](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
-  - [🖼️ Presentation Slides](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Visuals)
 - Canva – presentation to mock stakeholders
-  - [📽️ Click here for the presentation](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Presentation/C515%20Capstone%20Project.pdf)
+  - [📽️ Presentation Slide Deck](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Presentation/C515%20Capstone%20Project.pdf)
 
 ## ⚙️ Process Breakdown
 
@@ -44,3 +43,12 @@ This project is a mock portfolio case study I did during my COOP fellowship with
 
 - California, Arizona, and Colorado emerged as top-performing states, with strong conversion rates and relatively low costs
 - Viewable impressions and overall viewability appear to correlate more closely with state population size and campaign frequency than cost
+
+## My Slide Visuals
+![462949202-4ac60f4b-5d1f-44df-84c1-d410921c8742](https://github.com/user-attachments/assets/1d0eb2bd-3b22-4a82-a963-7285a2cdaa0b)
+![462949214-fa585ae7-5c7c-41e2-99ac-b1c3d31d48fe](https://github.com/user-attachments/assets/b09981c6-6c95-4abb-9e1e-c878795f4355)
+![462949223-979ead2a-4390-4a33-b30f-43a81999ba3b](https://github.com/user-attachments/assets/670ebd57-ed5f-482c-8e84-592559f88d99)
+![462949181-b3fb5c05-73e7-4f46-ac43-58cb8ef15c07](https://github.com/user-attachments/assets/2aa938ef-1864-4c94-b736-b64ef084e9b3)
+
+
+
