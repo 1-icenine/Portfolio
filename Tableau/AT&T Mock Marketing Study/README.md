@@ -5,13 +5,15 @@ This project is a mock portfolio case study I did during my COOP fellowship. I a
 ## 🔍 Project Overview
 
 **Objective:**  
-- Analyze and visualize key marketing metrics (vCPM, CTR, Viewability, and Viewable Impressions) for AT&T to evaluate campaign performance, customer demographics, and engagement trends
+- Clean and prepare a dataset of 700+ entries to ensure it can be joined with another dataset containing user demographic info
+- Analyze and visualize key marketing metrics (vCPM, CTR, viewability, and viewable impressions) for AT&T to evaluate campaign performance, customer demographics, and engagement trends
 
 **Tools Used:**
 - Excel – data cleaning and preprocessing
-  - [📈 Click here for my Excel dataset](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
+  - [📈 Click here for the campaign and user demographic datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
+  - [🧹 Click here for my cleaning process for campaign dataset](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset/Nick's%20Data%20Cleanup%20Process.pdf)
 - Tableau – trend analysis via dual charts
-  - [📈 Click here for my Tableau visualizations](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
+  - [📶 Click here for my Tableau visualizations](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
   - [🖼️ Click here for my presentation slides](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Visuals)
 - Canva – presentation to mock stakeholders
   - [📽️ Click here for the presentation](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Presentation/C515%20Capstone%20Project.pdf)
@@ -29,7 +31,7 @@ This project is a mock portfolio case study I did during my COOP fellowship. I a
 - Cleaned up special characters (e.g., replaced "Â»" with "-" in `audience_segment`)
 
 ### 2. Data Analysis (Tableau)
-- Compared vCPM against CTR, Viewability, and Viewable Impressions across states
+- Compared vCPM against CTR, viewability, and viewable impression count across states
 - Identified trends among the top 5 and bottom 5 states by average gross campaign budget
 - Created impactful visualizations for stakeholder exploration and presentation
 
