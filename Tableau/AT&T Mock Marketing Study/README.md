@@ -1,6 +1,6 @@
 # 📊 AT&T Marketing Metrics Analysis
 
-This project is a mock portfolio case study I did during my COOP fellowship. I analyzed AT&T's marketing performance with a dataset provided for educational purposes. My goal was to uncover actionable insights by location to improve customer engagement and campaign effectiveness
+This project is a mock portfolio case study I did during my COOP fellowship with 3 other colleagues. I analyzed AT&T's marketing performance with two datasets about campaign performance and user info. My goal was to uncover actionable insights by location to improve customer engagement and campaign effectiveness
 
 ## 🔍 Project Overview
 
@@ -10,11 +10,11 @@ This project is a mock portfolio case study I did during my COOP fellowship. I a
 
 **Tools Used:**
 - Excel – data cleaning and preprocessing
-  - [📈 Click here for the campaign and user demographic datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
-  - [🧹 Click here for my cleaning process for campaign dataset](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset/Nick's%20Data%20Cleanup%20Process.pdf)
+  - [📈 Campaign and user demographic datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
+  - [🧹 My Cleaning Process](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset/Nick's%20Data%20Cleanup%20Process.pdf)
 - Tableau – trend analysis via dual charts
-  - [📶 Click here for my Tableau visualizations](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
-  - [🖼️ Click here for my presentation slides](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Visuals)
+  - [📶 Tableau Public Link](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
+  - [🖼️ Presentation Slides](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Visuals)
 - Canva – presentation to mock stakeholders
   - [📽️ Click here for the presentation](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Presentation/C515%20Capstone%20Project.pdf)
 
