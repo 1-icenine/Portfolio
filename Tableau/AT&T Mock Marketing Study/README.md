@@ -12,7 +12,7 @@ This project is a mock portfolio case study I did during my COOP fellowship. I a
   - [📈 Click here for my Excel dataset](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
 - Tableau – trend analysis via dual charts
   - [📈 Click here for my Tableau visualizations](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
-  - [🖼️ Click here for my presentation visuals](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Visuals)
+  - [🖼️ Click here for my presentation slides](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Visuals)
 - Canva – presentation to mock stakeholders
   - [📽️ Click here for the presentation](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Presentation/C515%20Capstone%20Project.pdf)
 
