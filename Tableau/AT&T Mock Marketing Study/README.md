@@ -11,6 +11,7 @@ This project is a mock portfolio case study I did during my COOP fellowship with
 **Tools Used:**
 - Excel – data cleaning and preprocessing
   - [📈 Campaign and User Demographic Datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
+  - [🧹 Data Cleanup Documentation](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset/Nick's%20Data%20Cleanup%20Process.pdf)
 - Tableau – trend analysis via dual charts
   - [📶 Tableau Public Link](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
 - Canva – presentation to mock stakeholders
@@ -18,14 +19,11 @@ This project is a mock portfolio case study I did during my COOP fellowship with
 
 ## ⚙️ Process Breakdown
 
-### 1. Data Cleaning (Excel)
+### 1. Data Cleaning Summary (Excel)
 - Extracted `creative_size` and `user_id` from a combined column using the `SPLIT` function with "|" as the delimiter
-- Renamed columns for clarity (e.g., `creative_size` → `creative_size_px`, `gross_cost` → `gross_cost_USD`)
 - Formatted `gross_cost_USD` as currency (note: removed "$" to avoid issues when importing to SQL)
 - Identified and removed duplicate `campaign_id` entries (used conditional formatting)
-- Removed rows with missing critical KPIs
 - Validated `campaign_id` consistency using `LEN()` to ensure uniform formatting
-- Reviewed column filters to check for spelling inconsistencies (none found)
 - Cleaned up special characters (e.g., replaced "Â»" with "-" in `audience_segment`)
 
 ### 2. Data Analysis (Tableau)
