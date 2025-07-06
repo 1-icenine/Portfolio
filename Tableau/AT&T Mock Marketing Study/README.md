@@ -11,7 +11,6 @@ This project is a mock portfolio case study I did during my COOP fellowship with
 **Tools Used:**
 - Excel – data cleaning and preprocessing
   - [📈 Campaign and User Demographic Datasets](https://github.com/1-icenine/Portfolio/tree/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset)
-  - [🧹 My Cleaning Process](https://github.com/1-icenine/Portfolio/blob/main/Tableau/AT%26T%20Mock%20Marketing%20Study/Dataset/Nick's%20Data%20Cleanup%20Process.pdf)
 - Tableau – trend analysis via dual charts
   - [📶 Tableau Public Link](https://public.tableau.com/app/profile/nicholas.louie/viz/NicksSpatialAnalysisCTRCPMvCPMViewability/vCPMvsViewabilityDualChart)
 - Canva – presentation to mock stakeholders
